@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexeso</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/95/95454.png">
+
+    <script src="main.js" type="module" defer></script>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="css/styly.css">
+</head>
+<body>
+    <section id="app">
+        
+        <div class="menu">
+            <hlavne-menu></hlavne-menu>
+        </div>
+
+        <div class="kartyDiv">
+            <karta v-for="(karta, index) in vsetkyKarty" :id="karta.id" :text="karta.obsah" :key="index"></karta>
+        </div>
+    </section>
+
+    <footer>&copy; Matúš Seliga</footer>
+</body>
+</html>
